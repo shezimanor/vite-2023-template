@@ -79,3 +79,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (min-resolution: 2dppx) {
+  .test-autoprefixer {
+    color: #747bff;
+  }
+}

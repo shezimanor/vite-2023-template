@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue';
+import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import removeConsole from 'vite-plugin-remove-console';
@@ -12,6 +13,12 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
+    }
+  },
+  css: {
+    // 樣式表插件
+    postcss: {
+      plugins: [autoprefixer]
     }
   }
 });
