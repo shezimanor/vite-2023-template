@@ -21,6 +21,14 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off', // 不要檢查依賴檔
     'vue/no-v-html': 'off' // v-html 不會報錯
   },
+  settings: {
+    // 需安裝 eslint-import-resolver-alias 以解決 eslint 看不懂 vite.config.js 裡面設定的 alias
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']]
+      }
+    }
+  },
   globals: {
     // ESLint Doc: https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
     // 例子: gtag: 'readonly' // 讓 ESLint 可以認得全域 gtag 變數
