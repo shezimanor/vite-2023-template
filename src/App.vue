@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
 
 console.log('ENV:', import.meta.env.MODE);
 
@@ -11,6 +12,10 @@ onMounted(() => {
 </script>
 
 <template>
+  <div style="margin-bottom: 12px; padding: 8px">
+    <RouterLink to="/">首頁</RouterLink> |
+    <RouterLink to="/about">關於我</RouterLink>
+  </div>
   <RouterView />
 </template>
 
