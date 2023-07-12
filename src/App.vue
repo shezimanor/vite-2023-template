@@ -1,31 +1,23 @@
 <script setup>
-import HelloWorld from '@/components/HelloWorld.vue';
-console.log('env:', import.meta.env.VITE_APP_NAME);
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { onMounted } from 'vue';
+
+console.log('ENV:', import.meta.env.MODE);
+
+onMounted(() => {
+  console.log('app mounted');
+});
 </script>
 
 <template>
-  <div class="test">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <RouterView />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+// 引入 主控樣式最核心的main.scss
+@import '@/assets/scss/reset';
+@import '@/assets/scss/style';
+@import '@/assets/scss/home';
 </style>
